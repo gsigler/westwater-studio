@@ -1,0 +1,27 @@
+.projects {
+  padding: 1rem 0 3rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--green);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

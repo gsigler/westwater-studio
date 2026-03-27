@@ -1,0 +1,46 @@
+.about {
+  padding: 1rem 0 3rem;
+}
+
+.about-terminal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  line-height: 2;
+  animation: fadeIn 0.5s ease both;
+}
+
+.about-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.about-key {
+  color: var(--cyan);
+}
+
+.about-sep {
+  color: var(--muted);
+}
+
+.about-str {
+  color: #fbbf24;
+}
+
+.about-comment {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.about-link {
+  color: #fbbf24;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
