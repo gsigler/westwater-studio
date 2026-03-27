@@ -1,46 +1,66 @@
 .about {
-  padding: 1rem 0 3rem;
+  padding: 3rem 0 4rem;
 }
 
-.about-terminal {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  font-family: var(--mono);
-  font-size: 0.875rem;
-  line-height: 2;
+.about .section-header {
+  margin-bottom: 1.75rem;
+}
+
+.about .section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 52ch;
   animation: fadeIn 0.5s ease both;
 }
 
-.about-line {
+.about-bio {
+  font-size: 0.925rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.about-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
 }
 
 .about-key {
-  color: var(--cyan);
-}
-
-.about-sep {
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  min-width: 6rem;
+  flex-shrink: 0;
 }
 
-.about-str {
-  color: #fbbf24;
-}
-
-.about-comment {
-  color: var(--muted);
-  font-style: italic;
+.about-val {
+  font-size: 0.875rem;
+  color: var(--text);
 }
 
 .about-link {
-  color: #fbbf24;
+  font-size: 0.875rem;
+  color: var(--text);
+  transition: color 0.15s ease;
 }
 
 .about-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: #fff;
 }

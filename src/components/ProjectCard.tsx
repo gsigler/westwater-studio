@@ -19,32 +19,35 @@ export default function ProjectCard({
   tags,
   accent,
 }: ProjectCardProps) {
-  const statusLabel = status === 'live' ? '● live' : status === 'api' ? '◈ api' : '○ wip'
-  const statusClass = `status status-${status}`
+  const statusColors: Record<string, string> = {
+    live: '#4ade80',
+    api: '#22d3ee',
+    wip: '#64748B',
+  }
+  const statusDotColor = statusColors[status] ?? '#64748B'
 
   return (
     <div className="project-card" style={{ '--accent': accent } as React.CSSProperties}>
-      <div className="card-bar">
-        <span className="card-dot" />
-        <span className="card-dot" />
-        <span className="card-dot" />
-        <span className="card-name mono">{name}/</span>
-        <span className={statusClass}>{statusLabel}</span>
+      <div className="card-header">
+        <div className="card-title-row">
+          <span className="card-name">{name}</span>
+          <span className="card-status-dot" style={{ background: statusDotColor }} title={status} />
+        </div>
+        <p className="card-tagline">{tagline}</p>
       </div>
       <div className="card-body">
-        <p className="card-tagline">{tagline}</p>
         <p className="card-desc">{description}</p>
         <div className="card-footer">
           <div className="card-tags">
             {tags.map(t => (
-              <span key={t} className="tag mono">{t}</span>
+              <span key={t} className="tag">{t}</span>
             ))}
           </div>
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="card-link mono"
+            className="card-link"
           >
             {url.replace('https://', '')} →
           </a>
