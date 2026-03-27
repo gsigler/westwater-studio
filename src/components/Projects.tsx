@@ -22,7 +22,7 @@ const PROJECTS: Array<{
   },
   {
     name: 'retroation',
-    url: 'https://retroation.co',
+    url: 'https://retroation.com',
     status: 'live',
     tagline: 'Retrospectives that don\'t suck.',
     description:
